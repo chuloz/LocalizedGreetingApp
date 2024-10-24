@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f0eb13b-88dd-4b50-8847-c1e20bdf9fc6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="2f0eb13b-88dd-4b50-8847-c1e20bdf9fc6" name="Changes" comment="Added Jenkinsfile">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LocalizedGreeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LocalizedGreeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MessagesBundle_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MessagesBundle_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MessagesBundle_es_ES.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MessagesBundle_es_ES.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MessagesBundle_fr_FR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MessagesBundle_fr_FR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LocalizedGreetingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LocalizedGreetingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -38,8 +41,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.LocalizedGreeting.executor": "Run",
+    "JUnit.LocalizedGreetingTest.executor": "Run",
+    "JUnit.LocalizedGreetingTest.testEnglishGreeting.executor": "Run",
+    "JUnit.LocalizedGreetingTest.testJapaneseGreeting.executor": "Run",
+    "Maven.LocalizedGreetingApp [clean].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -47,9 +55,56 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.LocalizedGreetingTest">
+    <configuration name="LocalizedGreeting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LocalizedGreeting" />
+      <module name="LocalizedGreetingApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocalizedGreetingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LocalizedGreetingApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LocalizedGreetingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocalizedGreetingTest.testEnglishGreeting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LocalizedGreetingApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LocalizedGreetingTest" />
+      <option name="METHOD_NAME" value="testEnglishGreeting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LocalizedGreetingTest.testJapaneseGreeting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LocalizedGreetingApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LocalizedGreetingTest" />
+      <option name="METHOD_NAME" value="testJapaneseGreeting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LocalizedGreetingTest" />
+        <item itemvalue="Application.LocalizedGreeting" />
+        <item itemvalue="JUnit.LocalizedGreetingTest.testEnglishGreeting" />
+        <item itemvalue="JUnit.LocalizedGreetingTest.testJapaneseGreeting" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -65,11 +120,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1729752091745</updated>
-      <workItem from="1729752092843" duration="1613000" />
+      <workItem from="1729752092843" duration="6042000" />
     </task>
+    <task id="LOCAL−00001" summary="valmis">
+      <option name="closed" value="true" />
+      <created>1729754232084</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1729754232084</updated>
+    </task>
+    <task id="LOCAL−00002" summary="Added Jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1729774946761</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1729774946761</updated>
+    </task>
+    <task id="LOCAL−00003" summary="Added Jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1729775159451</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1729775159451</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Added Jenkinsfile">
+      <option name="closed" value="true" />
+      <created>1729775402969</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1729775402969</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="valmis" />
+    <MESSAGE value="Added Jenkinsfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Jenkinsfile" />
   </component>
 </project>
