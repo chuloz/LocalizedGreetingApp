@@ -1,10 +1,5 @@
 pipeline {
     agent any
-    tools {
-            maven 'Maven3'  // Ensure Maven is installed
-            jdk 'JD'
-        }
-
 
     environment {
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
