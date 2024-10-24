@@ -1,13 +1,13 @@
 pipeline {
     agent any
     tools {
-            maven 'Maven3'  // Ensure Maven is installed
-            jdk 'JD'
+        maven 'Maven3'  // Ensure Maven is installed
+        jdk 'JD'       // Ensure JDK is installed
     }
     environment {
-        DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
-        DOCKERHUB_REPO = 'muha270/localizedgreetingapp'
-        DOCKER_IMAGE_TAG = 'latest'
+        DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'  // Credentials ID in Jenkins
+        DOCKERHUB_REPO = 'muha270/localizedgreetingapp'      // Docker Hub repo
+        DOCKER_IMAGE_TAG = 'latest'                          // Docker image tag
     }
 
     stages {
@@ -18,33 +18,30 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                // Run the tests first to generate data for Jacoco and JUnit
-                bat 'mvn clean test' // For Windows agents
-                // sh 'mvn clean test' // Uncomment if on a Linux agent
+                bat 'mvn clean test'  // For Windows agents
+                // sh 'mvn clean test'  // Uncomment for Linux agents
             }
         }
         stage('Code Coverage') {
             steps {
-                // Generate Jacoco report after the tests have run
-                bat 'mvn jacoco:report'
+                bat 'mvn jacoco:report'  // For Windows agents
+                // sh 'mvn jacoco:report'  // Uncomment for Linux agents
             }
         }
         stage('Publish Test Results') {
             steps {
-                // Publish JUnit test results
-                junit '**/target/surefire-reports/*.xml'
+                junit '**/target/surefire-reports/*.xml'  // Publish JUnit results
             }
         }
         stage('Publish Coverage Report') {
             steps {
-                // Publish Jacoco coverage report
-                jacoco()
+                jacoco()  // Publish Jacoco code coverage report
             }
         }
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("${env.DOCKERHUB_REPO}:${env.DOCKER_IMAGE_TAG}")
+                    docker.build("${env.DOCKERHUB_REPO}:${env.DOCKER_IMAGE_TAG}")  // Build Docker image
                 }
             }
         }
@@ -52,7 +49,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', env.DOCKERHUB_CREDENTIALS_ID) {
-                        docker.image("${env.DOCKERHUB_REPO}:${env.DOCKER_IMAGE_TAG}").push()
+                        docker.image("${env.DOCKERHUB_REPO}:${env.DOCKER_IMAGE_TAG}").push()  // Push image to Docker Hub
                     }
                 }
             }
